@@ -50,6 +50,7 @@ This is the backend API for the Blog Management Application developed using .NET
 
 ### Application Structure
 
+```plaintext
 BlogManagementApp/
 ├── Controllers/
 │   ├── BlogController.cs
@@ -71,3 +72,4 @@ BlogManagementTest/
 ├── Services/
 │   ├── BlogServiceTests.cs
 ├── BlogManagementTest.csproj
+```
