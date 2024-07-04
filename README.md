@@ -1,4 +1,3 @@
-```markdown
 # Blog Management Application (Backend)
 
 This is the backend API for the Blog Management Application developed using .NET 6. The API provides endpoints for creating, retrieving, and deleting blog posts. It also includes custom error handling and logging using middleware.
