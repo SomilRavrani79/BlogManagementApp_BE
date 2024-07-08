@@ -1,0 +1,158 @@
+[
+  {
+    "Id": 1,
+    "Username": "Alice",
+    "DateCreated": "2024-07-06T09:34:48.849Z",
+    "Text": "Exploring new coding techniques."
+  },
+  {
+    "Id": 2,
+    "Username": "Bob",
+    "DateCreated": "2024-07-05T10:17:06.864Z",
+    "Text": "Starting my journey in software development."
+  },
+  {
+    "Id": 3,
+    "Username": "Charlie",
+    "DateCreated": "2024-07-05T10:17:45.127Z",
+    "Text": "Loving the new features in Angular."
+  },
+  {
+    "Id": 4,
+    "Username": "Diana",
+    "DateCreated": "2024-07-05T10:19:15.446Z",
+    "Text": "Just completed my first project!"
+  },
+  {
+    "Id": 5,
+    "Username": "Eve",
+    "DateCreated": "2024-07-06T09:51:04.492Z",
+    "Text": "Learning about cybersecurity."
+  },
+  {
+    "Id": 6,
+    "Username": "Frank",
+    "DateCreated": "2024-07-05T10:26:17.051Z",
+    "Text": "Developing a mobile app using React Native."
+  },
+  {
+    "Id": 7,
+    "Username": "Grace",
+    "DateCreated": "2024-07-05T10:26:20.55Z",
+    "Text": "Exploring the world of AI and ML."
+  },
+  {
+    "Id": 8,
+    "Username": "Hank",
+    "DateCreated": "2024-07-05T10:26:24.458Z",
+    "Text": "Building a personal portfolio website."
+  },
+  {
+    "Id": 9,
+    "Username": "Ivy",
+    "DateCreated": "2024-07-05T10:26:28.48Z",
+    "Text": "Learning data structures and algorithms."
+  },
+  {
+    "Id": 10,
+    "Username": "Jack",
+    "DateCreated": "2024-07-05T10:26:33.079Z",
+    "Text": "Understanding cloud computing basics."
+  },
+  {
+    "Id": 11,
+    "Username": "Kathy",
+    "DateCreated": "2024-07-05T10:26:36.758Z",
+    "Text": "Developing a REST API with Node.js."
+  },
+  {
+    "Id": 12,
+    "Username": "Liam",
+    "DateCreated": "2024-07-05T10:26:39.232Z",
+    "Text": "Exploring microservices architecture."
+  },
+  {
+    "Id": 13,
+    "Username": "Mona",
+    "DateCreated": "2024-07-05T10:26:42.083Z",
+    "Text": "Building an e-commerce website."
+  },
+  {
+    "Id": 14,
+    "Username": "Nina",
+    "DateCreated": "2024-07-05T10:26:45.118Z",
+    "Text": "Learning about DevOps practices."
+  },
+  {
+    "Id": 15,
+    "Username": "Oscar",
+    "DateCreated": "2024-07-05T10:26:48.148Z",
+    "Text": "Starting a new open-source project."
+  },
+  {
+    "Id": 16,
+    "Username": "Pam",
+    "DateCreated": "2024-07-05T10:26:50.332Z",
+    "Text": "Working on a machine learning model."
+  },
+  {
+    "Id": 17,
+    "Username": "Quinn",
+    "DateCreated": "2024-07-05T10:26:52.969Z",
+    "Text": "Exploring serverless architecture."
+  },
+  {
+    "Id": 18,
+    "Username": "Ray",
+    "DateCreated": "2024-07-05T10:26:55.632Z",
+    "Text": "Learning about blockchain technology."
+  },
+  {
+    "Id": 19,
+    "Username": "Sara",
+    "DateCreated": "2024-07-05T10:27:00.857Z",
+    "Text": "Building a chatbot with Python."
+  },
+  {
+    "Id": 20,
+    "Username": "Tom",
+    "DateCreated": "2024-07-05T11:10:12.091Z",
+    "Text": "Starting a new position as a software engineer."
+  },
+  {
+    "Id": 21,
+    "Username": "Uma",
+    "DateCreated": "2024-07-05T11:56:31.729Z",
+    "Text": "Studying for a certification in cloud computing."
+  },
+  {
+    "Id": 22,
+    "Username": "Victor",
+    "DateCreated": "2024-07-06T09:23:18.893Z",
+    "Text": "Exploring Docker and containerization."
+  },
+  {
+    "Id": 23,
+    "Username": "Wendy",
+    "DateCreated": "2024-07-08T05:12:55.344Z",
+    "Text": "Building a new UI with Angular."
+  },
+  {
+    "Id": 24,
+    "Username": "Xander",
+    "DateCreated": "2024-07-06T11:51:51.346Z",
+    "Text": "Learning about progressive web apps."
+  },
+  {
+    "Id": 25,
+    "Username": "Test",
+    "DateCreated": "2024-07-06T11:54:36.933Z",
+    "Text": "Hello"
+  },
+  {
+    "Id": 26,
+    "Username": "David",
+    "DateCreated": "2024-07-06T12:41:44.587Z",
+    "Text": "Warner"
+  }
+]

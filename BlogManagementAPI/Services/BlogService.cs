@@ -1,6 +1,9 @@
 ﻿using BlogManagementApp.Models;
 using BlogManagementApp_BE.Interfaces;
+using BlogManagementApp_BE.models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Newtonsoft.Json;
+using System.Reflection.Metadata;
 using System.Xml;
 
 namespace BlogManagementApp.Services
@@ -8,7 +11,7 @@ namespace BlogManagementApp.Services
     public class BlogService : IBlogService
     {
         private readonly string _filePath = "blogs.json";
-        private List<BlogPost> _blogs;
+        private readonly List<BlogPost> _blogs = new();
         private readonly ILogger<BlogService> _logger;
 
         public BlogService(ILogger<BlogService> logger)
@@ -25,10 +28,29 @@ namespace BlogManagementApp.Services
             _logger = logger;
         }
 
-        public List<BlogPost> Get()
+        public List<BlogPost> Get(string searchTerm = null, string sortBy = "date")
         {
             _logger.LogInformation("Retrieving all blogs from the repository.");
-            return _blogs;
+            var blogs = _blogs.AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                blogs = blogs.Where(b => b.Username.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                                         b.Text.Contains(searchTerm, StringComparison.OrdinalIgnoreCase));
+            }
+
+            switch (sortBy.ToLower())
+            {
+                case "name":
+                    blogs = blogs.OrderBy(b => b.Username);
+                    break;
+                case "date":
+                default:
+                    blogs = blogs.OrderByDescending(b => b.DateCreated);
+                    break;
+            }
+
+            return blogs.ToList();
         }
 
         public BlogPost Get(int id)
@@ -44,6 +66,29 @@ namespace BlogManagementApp.Services
             _blogs.Add(blog);
             SaveToFile();
         }
+
+        public BlogPost AddOrUpdate(BlogPost blog)
+        {
+            if (blog.Id == 0)
+            {
+                _logger.LogInformation("Adding a new blog to the repository.");
+                blog.Id = _blogs.Count > 0 ? _blogs.Max(b => b.Id) + 1 : 1;
+                _blogs.Add(blog);
+            }
+            else
+            {
+                _logger.LogInformation($"Updating blog with id {blog.Id}.");
+                var index = _blogs.FindIndex(b => b.Id == blog.Id);
+                if (index != -1)
+                {
+                    _blogs[index] = blog;
+                }
+            }
+
+            SaveToFile();
+            return blog;
+        }
+
 
         public void Remove(int id)
         {
