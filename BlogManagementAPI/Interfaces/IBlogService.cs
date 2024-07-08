@@ -5,7 +5,7 @@ namespace BlogManagementApp_BE.Interfaces
 {
     public interface IBlogService
     {
-        List<BlogPost> Get(string searchTerm = null, string sortBy = "date");
+        List<BlogPost> Get(string searchTerm = null, string sortBy = "date", string direction = "desc");
         BlogPost Get(int id);
         BlogPost AddOrUpdate(BlogPost blog);
         void Remove(int id);

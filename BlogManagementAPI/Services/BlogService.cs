@@ -27,8 +27,7 @@ namespace BlogManagementApp.Services
             }
             _logger = logger;
         }
-
-        public List<BlogPost> Get(string searchTerm = null, string sortBy = "date")
+        public List<BlogPost> Get(string searchTerm = null, string sortBy = "date", string direction ="desc")
         {
             _logger.LogInformation("Retrieving all blogs from the repository.");
             var blogs = _blogs.AsQueryable();
@@ -41,12 +40,12 @@ namespace BlogManagementApp.Services
 
             switch (sortBy.ToLower())
             {
-                case "name":
-                    blogs = blogs.OrderBy(b => b.Username);
+                case "username":
+                    blogs = direction == "desc" ? blogs.OrderByDescending(b => b.Username) :  blogs.OrderBy(b => b.Username);
                     break;
                 case "date":
                 default:
-                    blogs = blogs.OrderByDescending(b => b.DateCreated);
+                    blogs = direction == "desc" ? blogs.OrderByDescending(b => b.DateCreated)  :  blogs.OrderBy(b => b.DateCreated);
                     break;
             }
 

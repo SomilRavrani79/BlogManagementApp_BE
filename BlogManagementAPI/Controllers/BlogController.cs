@@ -43,7 +43,7 @@ namespace BlogManagementApp.Controllers
             }
             else
             {
-                var allBlogs = _blogService.Get(searchParams.SearchTerm, searchParams.SortBy);
+                var allBlogs = _blogService.Get(searchParams.SearchTerm, searchParams.SortBy, searchParams.Direction);
                 var paginatedBlogs = allBlogs.Skip((searchParams.PageNumber - 1) * searchParams.PageSize).Take(searchParams.PageSize).ToList();
                 var totalItems = allBlogs.Count();
 

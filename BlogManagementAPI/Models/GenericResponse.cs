@@ -20,6 +20,7 @@
         public int PageNumber { get; set; } = 1;
         public int PageSize { get; set; } = 10;
         public int? Id { get; set; }
+        public string Direction { get; set; } = "desc";
         public string SearchTerm { get; set; }
         public string SortBy { get; set; } = "date";
     }
